@@ -3,7 +3,7 @@ import '../App.css';
 
 const Cars = ({model, year, img}) => {
     return (
-        <div>
+        <div className="cars">
             <h1>{model}</h1>
             <h4>{year}</h4>
             <img src={img} alt="img"/>

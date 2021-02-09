@@ -1,5 +1,7 @@
+import React from "react";
 import "./App.css";
 import Cars from "./components/cars";
+import Changes from "./components/changes";
 
 function App() {
   const car = [
@@ -21,28 +23,32 @@ function App() {
       id: 3,
       model: "Audi",
       year: 2017,
-      img:
-        "https://quto.ru/service-imgs/5d/8b/6f/f6/5d8b6ff67b89c.jpeg",
+      img: "https://quto.ru/service-imgs/5d/8b/6f/f6/5d8b6ff67b89c.jpeg",
     },
     {
       id: 4,
       model: "Jaguar",
       year: 2020,
       img:
-        "https://cars.usnews.com/static/images/Auto/izmo/i157546822/2020_jaguar_xf_angularfront.jpg"
+        "https://cars.usnews.com/static/images/Auto/izmo/i157546822/2020_jaguar_xf_angularfront.jpg",
     },
   ];
 
   return (
     <div className="App">
-      {car.map(item => (
-        <Cars
-          model={item.model}
-          year={item.year}
-          img={item.img}
-          key={item.id}
-        />
-      ))}
+      <div className="first">
+        {car.map((item) => (
+          <Cars
+            model={item.model}
+            year={item.year}
+            img={item.img}
+            key={item.id}
+          />
+        ))}
+      </div>
+      <div className="second">
+        <Changes />
+      </div>
     </div>
   );
 }

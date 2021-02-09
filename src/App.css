@@ -1,6 +1,17 @@
 .App {
   display: flex;
+  flex-direction: column;
+}
+
+.first {
+  display: flex;
   justify-content: space-between;
+}
+
+.second {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 img {
